@@ -1,0 +1,10 @@
+<div class="row text-center">
+
+    <div class= "text-center col-4 m-3"*ngFor="let todo of todoListMock" (click)="selectedTodo(todo)">
+        <ul class="list-group">
+            <a class="list-group-item list-group-item-action">{{ todo.title }} | {{ todo.complete ? "Finalizada": "Pendente" }} </a>
+        </ul>
+    </div>
+</div>
+
+<app-todo-details [selectTodo]="selectTodo" (completed)="markCompleted($event)"></app-todo-details>

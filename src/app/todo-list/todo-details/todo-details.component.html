@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-3 card text-center m-3" style="width: 18rem;" *ngIf="selectTodo">
+        <div class="card-body">
+            <h5 class="card-title">{{ selectTodo.title }}</h5>
+            <p class="card-text">{{ selectTodo.description }}</p>
+            <a class="btn btn-primary" (click)="markCompleted()">Completed</a>
+        </div>
+    </div>
+</div>
